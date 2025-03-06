@@ -1,0 +1,43 @@
+type Query {
+    getBooksByAuthor(authorName: String): [Book]
+    getAuthorsByCountry(countryName: String): [Author]
+}
+
+type Mutation {
+    addBook(input: BookInput): Book
+}
+
+type Book {
+    id: Int
+    title: String
+    author: Author
+}
+
+type Author {
+    id: Int
+    name: String
+    country: Country
+}
+
+type Country {
+    id: Int
+    name: String,
+    countryCode: Int
+}
+
+input CountryInput {
+    id: Int
+    name: String
+    countryCode: Int
+}
+
+input AuthorInput {
+    id: Int
+    name: String
+    country: CountryInput
+}
+
+input BookInput {
+    title: String
+    author: AuthorInput
+}
