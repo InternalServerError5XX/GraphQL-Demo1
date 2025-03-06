@@ -15,3 +15,26 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+target/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.hprof
+*.DS_Store
+/.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# OS специфічні файли
+*.swp
+*.swo
+Thumbs.db
+ehthumbs.db
+.DS_Store
