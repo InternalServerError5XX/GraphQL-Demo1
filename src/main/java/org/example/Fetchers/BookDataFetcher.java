@@ -21,14 +21,11 @@ public class BookDataFetcher implements DataFetcher<List<Book>>
     {
         String authorName = environment.getArgument("authorName");
 
-        if (authorName != null && !authorName.isEmpty())
-        {
-            return books.stream()
-                    .filter(book -> book.getAuthor() != null &&
-                            book.getAuthor().getName().toLowerCase().contains(authorName.toLowerCase()))
-                    .collect(Collectors.toList());
-        }
+        if (authorName.isEmpty())
+            return books;
 
-        return books;
+        return books.stream()
+                .filter(book -> book.getAuthor().getName().toLowerCase().contains(authorName.toLowerCase()))
+                .toList();
     }
 }

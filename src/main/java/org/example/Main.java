@@ -2,14 +2,13 @@ package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import graphql.ExecutionInput;
 import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args) throws Exception
     {
-        var graphQLProvider = new GraphQLProvider();
+        var graphQL = new GraphQLProvider().getGraphQL();
         var scanner = new Scanner(System.in);
 
         while (true)
@@ -20,10 +19,10 @@ public class Main
 
             System.out.println("Enter GraphQL query:");
             var query = scanner.nextLine();
-            var result = graphQLProvider.getGraphQL().execute(ExecutionInput.newExecutionInput().query(query).build());
+            var response = graphQL.execute(query);
 
             var objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
-            var jsonResult = objectMapper.writeValueAsString(result.getData());
+            var jsonResult = objectMapper.writeValueAsString(response.getData());
             System.out.println(jsonResult);
         }
     }

@@ -28,7 +28,7 @@ public class GraphQLProvider
         var books = new ArrayList<>(List.of(objectMapper.readValue(json, Book[].class)));
 
         var schemaFile = new File("src/main/resources/schema.graphqls");
-        var schema = new String(Files.readAllBytes(Paths.get(schemaFile.toURI())));
+        var schema = new String(Files.readAllBytes(Paths.get(schemaFile.toString())));
 
         var typeRegistry = new SchemaParser().parse(schema);
         var wiring = RuntimeWiring.newRuntimeWiring()

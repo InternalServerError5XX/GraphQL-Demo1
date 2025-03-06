@@ -1,41 +1,49 @@
-[
-  {
-    "id": 1,
-    "title": "Book1",
-    "author": {
-      "id": 1,
-      "name": "Author1",
-      "country": {
-        "id": 1,
-        "name": "Country1",
-        "countryCode": 123
-      }
-    }
-  },
-  {
-    "id": 2,
-    "title": "Book2",
-    "author": {
-      "id": 2,
-      "name": "Author2",
-      "country": {
-        "id": 2,
-        "name": "Country2",
-        "countryCode": 12345
-      }
-    }
-  },
-  {
-    "id": 3,
-    "title": "Book3",
-    "author": {
-      "id": 2,
-      "name": "Author2",
-      "country": {
-        "id": 2,
-        "name": "Country2",
-        "countryCode": 12345
-      }
+[ {
+  "id" : 1,
+  "title" : "Book1",
+  "author" : {
+    "id" : 1,
+    "name" : "Author1",
+    "country" : {
+      "id" : 1,
+      "name" : "Country1",
+      "countryCode" : 123
     }
   }
-]
+}, {
+  "id" : 2,
+  "title" : "Book2",
+  "author" : {
+    "id" : 2,
+    "name" : "Author2",
+    "country" : {
+      "id" : 2,
+      "name" : "Country2",
+      "countryCode" : 12345
+    }
+  }
+}, {
+  "id" : 3,
+  "title" : "Book3",
+  "author" : {
+    "id" : 2,
+    "name" : "Author2",
+    "country" : {
+      "id" : 2,
+      "name" : "Country2",
+      "countryCode" : 12345
+    }
+  }
+}, {
+  "id" : 4,
+  "title" : "New Book",
+  "author" : {
+    "id" : 4,
+    "name" : "New Author",
+    "country" : {
+      "id" : 3,
+      "name" : "New Country",
+      "countryCode" : 123
+    }
+  }
+} ]
